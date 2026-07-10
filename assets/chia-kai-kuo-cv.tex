@@ -1,0 +1,173 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[a4paper,margin=1.55cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{microtype}
+
+\definecolor{ink}{HTML}{1F2D2F}
+\definecolor{muted}{HTML}{5D6868}
+\definecolor{accent}{HTML}{8F4433}
+\definecolor{line}{HTML}{D9DED6}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfauthor={Chia-Kai Kuo},
+  pdftitle={Chia-Kai Kuo - Curriculum Vitae}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlist[itemize]{leftmargin=1.35em,itemsep=1pt,topsep=2pt}
+\setlist[enumerate]{leftmargin=1.9em,itemsep=2pt,topsep=2pt}
+\renewcommand{\arraystretch}{1.1}
+
+\titleformat{\section}
+  {\large\bfseries\color{ink}}
+  {}{0pt}{\MakeUppercase}
+  [\vspace{2pt}{\color{line}\titlerule}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+\newcommand{\cvdate}[1]{\hfill{\color{muted}#1}}
+\newcommand{\role}[3]{\textbf{#1}, #2\cvdate{#3}}
+\newcommand{\publication}[4]{\item #1, ``#2'', #3. \href{https://arxiv.org/abs/#4}{arXiv:#4}.}
+\newcommand{\pubdescription}[1]{{\small\color{muted}Description: #1}}
+
+\begin{document}
+
+{\Huge\bfseries Chia-Kai Kuo}
+
+\vspace{4pt}
+Postdoctoral Researcher, Max Planck Institute for Physics, Munich
+
+\vspace{4pt}
+\href{mailto:ckkuai@mpp.mpg.de}{ckkuai@mpp.mpg.de} \quad
+\href{mailto:chiakaikuo@gmail.com}{chiakaikuo@gmail.com} \quad
+\href{https://orcid.org/0000-0002-1523-8025}{ORCID: 0000-0002-1523-8025} \quad
+\href{https://inspirehep.net/authors/1945409?ui-citation-summary=true}{INSPIRE-HEP}
+
+\section{Profile}
+
+I am a theoretical physicist working on scattering amplitudes, correlation functions, positive geometry, and modern on-shell methods in quantum field theory. My Ph.D. research focused on ABJM theory, especially the formulation of scattering amplitudes as differential forms associated with novel positive geometries.
+
+\section{Academic Position}
+
+\role{Postdoctoral Researcher}{Max Planck Institute for Physics, Munich, Germany}{01/06/2024 -- Present}
+
+\section{Education}
+
+\role{Ph.D. in Theoretical Physics}{National Taiwan University, Taipei, Taiwan}{01/02/2021 -- 30/05/2024}
+
+Supervisor: Song He and Yu-Tin Huang
+
+Thesis: \textit{Loop Amplitudes of ABJM and Its Positive Geometry}
+
+\role{M.Sc. in Physics}{National Taiwan University, Taipei, Taiwan}{01/09/2018 -- 31/08/2020}
+
+\role{B.Sc. in Physics}{National Taiwan University, Taipei, Taiwan}{01/09/2014 -- 31/08/2018}
+
+\section{Publications}
+
+I have authored 10 original research articles in peer-reviewed journals and 1 preprint. For up-to-date citation data, see my \href{https://inspirehep.net/authors/1945409?ui-citation-summary=true}{INSPIRE-HEP profile}.
+
+\subsection*{Refereed Publications}
+
+\begin{enumerate}
+  \publication{C.-K. Kuo and Q. Yang}{Notes on off-shell conformal integrals and correlation functions at five points}{Phys. Rev. D 113 (2026) 5}{2512.21947}
+
+  \pubdescription{We construct pure two-loop five-point off-shell conformal integral bases and use them to compute five-point half-BPS correlators at symbol level, including both maximal and non-maximal sectors.}
+
+  \publication{Y.-T. Huang, C.-K. Kuo and C. Zhang}{BDS ansatz in ABJM via scaffolding triangulations}{JHEP 02 (2026) 022}{2510.20663}
+
+  \pubdescription{We formulate the ABJM two-loop BDS ansatz using scaffolding triangulations, proving elliptic-cut cancellation and triangulation independence at arbitrary multiplicity.}
+
+  \publication{S. He, Y.-T. Huang and C.-K. Kuo}{Leading singularities and chambers of Correlahedron}{JHEP 03 (2026) 071}{2505.09808}
+
+  \pubdescription{We analyse leading singularities and chamber structures of the Correlahedron, showing that four-point correlator integrands admit a chamber-based geometric organisation beyond three loops.}
+
+  \publication{S. He, Y.-T. Huang and C.-K. Kuo}{All-loop geometry for four-point correlation functions}{Phys. Rev. D 110 (2024) 8, L081701}{2405.20292}
+
+  \pubdescription{We propose an all-loop positive geometry for four-point correlators in planar $\mathcal{N}=4$ SYM and verify that its canonical forms reproduce known correlator integrands up to three loops.}
+
+  \publication{S. He, Y.-T. Huang and C.-K. Kuo}{The ABJM Amplituhedron}{JHEP 09 (2023) 165}{2306.00951}
+
+  \pubdescription{We construct the ABJM amplituhedron as an all-loop, all-multiplicity positive geometry and obtain explicit one-loop and two-loop integrands from its canonical forms.}
+
+  \publication{S. He, C.-K. Kuo, Z. Li and Y.-Q. Zhang}{Emergent unitarity, all-loop cuts and integrations from the ABJM amplituhedron}{JHEP 07 (2023) 212}{2303.03035}
+
+  \pubdescription{We prove all-loop unitarity properties of the four-point ABJM amplituhedron and integrate its negative geometries up to two loops to extract infrared-finite data.}
+
+  \publication{S. He, C.-K. Kuo and Z. Li}{The two-loop eight-point amplitude in ABJM theory}{JHEP 02 (2023) 065}{2211.01792}
+
+  \pubdescription{We compute the two-loop eight-point ABJM amplitude, fixing the integrand from dual conformal symmetry, maximal cuts and soft-collinear constraints, and analyse its integrated finite part.}
+
+  \publication{S. He, C.-K. Kuo, Z. Li and Y.-Q. Zhang}{All-Loop Four-Point Aharony-Bergman-Jafferis-Maldacena Amplitudes from Dimensional Reduction of the Amplituhedron}{Phys. Rev. Lett. 129 (2022) 221604}{2204.08297}
+
+  \pubdescription{We define a reduced amplituhedron for four-point ABJM amplitudes by dimensional reduction of the $\mathcal{N}=4$ SYM amplituhedron and obtain explicit integrands up to five loops.}
+
+  \publication{S. He, C.-K. Kuo and Y.-Q. Zhang}{The momentum amplituhedron of SYM and ABJM from twistor-string maps}{JHEP 02 (2022) 148}{2111.02576}
+
+  \pubdescription{We relate twistor-string maps to momentum amplituhedra in $\mathcal{N}=4$ SYM and ABJM, showing how tree amplitudes arise as canonical forms of positive geometries.}
+
+  \publication{Y.-T. Huang, C.-K. Kuo and C. Wen}{Dualities for Ising networks}{Phys. Rev. Lett. 121 (2018) 251604}{1809.01231}
+
+  \pubdescription{We establish a correspondence between planar Ising networks and cells of the positive orthogonal Grassmannian, leading to recursive methods for computing network correlators.}
+\end{enumerate}
+
+\subsection*{Preprint}
+
+\begin{enumerate}
+  \publication{Y.-T. Huang, C.-K. Kuo, Y. Liu and J. Mei}{Beyond Discontinuities: Cosmological WFCs from the Supersymmetric Orthogonal Grassmannian}{Preprint}{2604.08512}
+
+  \pubdescription{We extend the orthogonal-Grassmannian construction from discontinuities to full supersymmetric cosmological wavefunction coefficients, using $\mathcal{N}=2$ supersymmetry to solve the inhomogeneous Ward identities.}
+\end{enumerate}
+
+\section{Awards and Honors}
+
+\begin{itemize}
+  \item \textbf{NTU-CTP Best Student Paper Award} \cvdate{2023}
+
+  Awarded by the Center for Theoretical Physics at National Taiwan University for an outstanding student research paper in theoretical physics.
+
+  \item \textbf{NCTS Student Outstanding Paper Award} \cvdate{2023}
+
+  Awarded by the National Center for Theoretical Sciences for the quality and originality of student-led research in theoretical physics.
+\end{itemize}
+
+\section{Invited Talks}
+
+\begin{itemize}
+  \item \textbf{Chamber Dissection of the Correlahedron in Four-Point Correlators}, New Ways to Higher Points, Humboldt University of Berlin, Germany \cvdate{01/10/2025}
+
+  \item \textbf{BDS Local Integrand in ABJM Theory}, 42nd International Conference on High Energy Physics, IUPAP C11 and Czech academic institutions, Czech Republic \cvdate{19/07/2024}
+
+  \item \textbf{Geometry of the Four-Point Correlators}, Kick-off Workshop on Positive Geometry in Particle Physics and Cosmology, Max Planck Institute for Mathematics, Germany \cvdate{16/02/2024}
+
+  \item \textbf{The ABJM Amplituhedron}, Amplitudes 2023 Conference, CERN, Switzerland \cvdate{07/08/2023}
+
+  \item \textbf{All-Loop Four-Point ABJM Amplitudes from Dimensional Reduction of the Amplituhedron}, 2022 NTU-Kyoto High Energy Physics Workshop / Kawai Fest, National Taiwan University, Taiwan \cvdate{18/12/2022}
+
+  \item \textbf{On-shell method on ABJM two-loop amplitudes}, NTU-NCTS String Seminar, National Taiwan University, Taiwan \cvdate{25/11/2022}
+\end{itemize}
+
+\section{Teaching and Supervision Experience}
+
+Teaching Assistant for ``Electricity and Magnetism'', ``Quantum Mechanics'', and ``Applied Mathematics I'' at the Department of Physics, National Taiwan University.
+
+\section{Computer Skills}
+
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\textbf{Languages} & LaTeX \\
+\textbf{Software} & Mathematica, Maple \\
+\end{tabularx}
+
+\end{document}
