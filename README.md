@@ -23,8 +23,10 @@ Selected work and recent updates are curated separately from the complete public
 
 - Publications and coauthors: [INSPIRE record](https://inspirehep.net/authors/1945409), individual arXiv records and publisher DOIs linked in the page. The 2026 cosmology preprint uses the revised July title; the five-point PRD paper uses article number 105022. The ABJM Amplituhedron entry includes its 2024 erratum.
 - Institutional email: [MPP theory group directory](https://wwwth.mpp.mpg.de/).
-- Talk titles, dates, venues and materials: official CERN Indico, Indico Global, MPI MiS, INFN and NTU-Kyoto event pages linked in the Talks section. The ICHEP 2024 record is 20 July, "Geometry of the four-point correlators." The September 2026 Pollica talk comes from the official INFN timetable.
+- Talk titles, dates, venues and materials: official CERN Indico, Indico Global, MPI MiS, INFN and NTU-Kyoto event pages linked in the Talks section, with the author's corrections taking precedence. Chia-Kai confirmed that the ICHEP 2024 presentation concerned "BDS ansatz in ABJM via scaffolding triangulations." That entry links to both the conference homepage and the related paper, not the mismatched Indico contribution. Only the month is shown because the exact day is not confirmed for the corrected entry. The September 2026 Pollica talk comes from the official INFN timetable.
 - These edits update the website only; the supplied downloadable CV is preserved as provided.
+
+Research descriptions are grounded in the papers linked within each topic. The overview uses first-person singular for research interests; selected-paper summaries use "we" for collaborative results. Keep the distinction between loop integrands and integrated amplitudes, and avoid presenting conjectured all-order constructions as fully established results. Formal publication titles are not copyedited.
 
 ## Portrait
 
