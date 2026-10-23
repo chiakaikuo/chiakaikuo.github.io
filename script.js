@@ -1,49 +1,112 @@
-const header = document.querySelector("[data-header]");
 const toggle = document.querySelector("[data-nav-toggle]");
 const menu = document.querySelector("[data-nav-menu]");
-const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
+const navLinks = [...menu.querySelectorAll("a")];
+const mobileViewport = window.matchMedia("(max-width: 800px)");
 
-const setHeaderState = () => {
-  header.classList.toggle("is-scrolled", window.scrollY > 20);
-};
-
-setHeaderState();
-window.addEventListener("scroll", setHeaderState, { passive: true });
+function setMenuOpen(open) {
+  menu.classList.toggle("is-open", open);
+  toggle.setAttribute("aria-expanded", String(open));
+  toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+  toggle.title = open ? "Close navigation" : "Open navigation";
+}
 
 toggle.addEventListener("click", () => {
-  const isOpen = menu.classList.toggle("is-open");
-  toggle.setAttribute("aria-expanded", String(isOpen));
+  setMenuOpen(toggle.getAttribute("aria-expanded") !== "true");
 });
 
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    menu.classList.remove("is-open");
-    toggle.setAttribute("aria-expanded", "false");
-  });
+  link.addEventListener("click", () => setMenuOpen(false));
 });
 
-const sections = navLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
-  .filter(Boolean);
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-    if (!visible) return;
-
-    navLinks.forEach((link) => {
-      link.classList.toggle("is-active", link.getAttribute("href") === `#${visible.target.id}`);
-    });
-  },
-  {
-    rootMargin: "-30% 0px -55% 0px",
-    threshold: [0.08, 0.2, 0.4, 0.6],
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+    setMenuOpen(false);
+    toggle.focus();
   }
-);
+});
 
-sections.forEach((section) => observer.observe(section));
+document.addEventListener("click", (event) => {
+  if (!menu.contains(event.target) && !toggle.contains(event.target)) setMenuOpen(false);
+});
 
+document.addEventListener("focusin", (event) => {
+  if (!menu.contains(event.target) && !toggle.contains(event.target)) setMenuOpen(false);
+});
+
+mobileViewport.addEventListener("change", () => setMenuOpen(false));
+
+const sections = navLinks.map((link) => document.querySelector(link.hash));
+let scrollPending = false;
+
+function updateActiveSection() {
+  let activeSection = sections[0];
+  for (const section of sections) {
+    if (section.getBoundingClientRect().top <= 140) activeSection = section;
+  }
+  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) {
+    activeSection = sections[sections.length - 1];
+  }
+  navLinks.forEach((link) => {
+    const active = link.hash === `#${activeSection.id}`;
+    link.classList.toggle("is-active", active);
+    if (active) link.setAttribute("aria-current", "location");
+    else link.removeAttribute("aria-current");
+  });
+  scrollPending = false;
+}
+
+function scheduleSectionUpdate() {
+  if (scrollPending) return;
+  scrollPending = true;
+  window.requestAnimationFrame(updateActiveSection);
+}
+
+window.addEventListener("scroll", scheduleSectionUpdate, { passive: true });
+window.addEventListener("resize", scheduleSectionUpdate);
+window.addEventListener("load", scheduleSectionUpdate);
+updateActiveSection();
+
+const tools = document.querySelector("[data-publication-tools]");
+const search = document.querySelector("#publication-search");
+const year = document.querySelector("#publication-year");
+const count = document.querySelector("[data-result-count]");
+const empty = document.querySelector("[data-empty-results]");
+const normalize = (value) => value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+const papers = [...document.querySelectorAll(".publication-list > li")].map((element) => ({
+  element,
+  year: element.querySelector(".pub-year").textContent.trim(),
+  text: normalize(element.textContent),
+}));
+
+// Derive filter options from the publication list so future additions need only HTML edits.
+[...new Set(papers.map((paper) => paper.year))].sort((a, b) => b.localeCompare(a)).forEach((value) => {
+  year.add(new Option(value, value));
+});
+
+function filterPublications() {
+  const terms = normalize(search.value).trim().split(/\s+/).filter(Boolean);
+  let matches = 0;
+  papers.forEach((paper) => {
+    const visible = (year.value === "all" || paper.year === year.value)
+      && terms.every((term) => paper.text.includes(term));
+    paper.element.hidden = !visible;
+    if (visible) matches += 1;
+  });
+  count.textContent = `${matches} ${matches === 1 ? "paper" : "papers"}`;
+  empty.hidden = matches !== 0;
+  scheduleSectionUpdate();
+}
+
+tools.addEventListener("submit", (event) => event.preventDefault());
+search.addEventListener("input", filterPublications);
+year.addEventListener("change", filterPublications);
+document.querySelector("[data-reset-search]").addEventListener("click", () => {
+  search.value = "";
+  year.value = "all";
+  filterPublications();
+  search.focus();
+});
+
+tools.hidden = false;
+filterPublications();
 document.querySelector("[data-year]").textContent = new Date().getFullYear();

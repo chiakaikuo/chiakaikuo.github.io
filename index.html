@@ -6,24 +6,23 @@
     <meta name="description" content="Academic website of Chia-Kai Kuo, postdoctoral researcher in theoretical physics at the Max Planck Institute for Physics.">
     <title>Chia-Kai Kuo | Theoretical Physics</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#fbfcfb">
+    <link rel="stylesheet" href="styles.css?v=20261023">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" data-header>
       <nav class="nav" aria-label="Primary navigation">
-        <a class="brand" href="#home" aria-label="Chia-Kai Kuo home">Chia-Kai Kuo</a>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>
-          <span class="nav-toggle-line"></span>
-          <span class="nav-toggle-line"></span>
-          <span class="nav-toggle-line"></span>
+        <a class="brand" href="#home" aria-label="Chia-Kai Kuo home">Chia-Kai Kuo<span class="brand-field">Theoretical Physics</span></a>
+        <button class="nav-toggle icon-button" type="button" aria-label="Open navigation" title="Open navigation" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>
+          <span class="icon icon-menu" aria-hidden="true"></span>
         </button>
         <div class="nav-links" id="site-menu" data-nav-menu>
+          <a href="#home" class="is-active" aria-current="location">About</a>
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
           <a href="#talks">Talks</a>
-          <a href="#teaching">Teaching</a>
           <a href="#cv">CV</a>
           <a href="#contact">Contact</a>
         </div>
@@ -31,46 +30,34 @@
     </header>
 
     <main id="main">
-      <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Theoretical physics and positive geometry</p>
-          <h1 id="hero-title">Chia-Kai Kuo</h1>
-          <p class="hero-lede">Postdoctoral Researcher at the Max Planck Institute for Physics, working on scattering amplitudes, ABJM theory, correlation functions, and the geometric structures behind quantum field theory.</p>
-          <div class="hero-actions" aria-label="Profile links">
-            <a class="button primary" href="#research">Research</a>
-            <a class="button secondary" href="assets/chia-kai-kuo-cv.pdf?v=20260710">CV</a>
-            <a class="button secondary" href="https://inspirehep.net/authors/1945409?ui-citation-summary=true">INSPIRE</a>
+      <section class="profile-section" id="home" aria-labelledby="profile-title">
+        <div class="section-inner profile-grid">
+          <div class="profile-heading">
+            <p class="section-kicker">Amplitudes &amp; positive geometry</p>
+            <h1 id="profile-title">Chia-Kai Kuo</h1>
+            <p class="profile-role">Postdoctoral Researcher<span>Max Planck Institute for Physics · Munich</span></p>
           </div>
-        </div>
-      </section>
-
-      <section class="section intro-section" aria-label="Overview">
-        <div class="section-inner intro-grid">
-          <div class="portrait-wrap">
-            <img src="assets/chia-kai-kuo-portrait.jpg?v=20260710" alt="Portrait of Chia-Kai Kuo" class="portrait">
-          </div>
-          <div class="intro-copy">
-            <p class="section-kicker">About</p>
-            <h2>Exploring amplitudes through geometry</h2>
-            <p>I am a postdoctoral researcher at the Max Planck Institute for Physics in Munich. My work focuses on modern on-shell methods in quantum field theory, especially the geometric formulation of scattering amplitudes and correlation functions.</p>
-            <p>During my Ph.D. at National Taiwan University, supervised by Song He and Yu-Tin Huang, I studied loop amplitudes in ABJM theory and their realization as differential forms associated with novel positive geometries.</p>
-            <div class="profile-strip" aria-label="External profiles">
-              <a href="mailto:ckkuai@mpp.mpg.de">ckkuai@mpp.mpg.de</a>
-              <a href="mailto:chiakaikuo@gmail.com">chiakaikuo@gmail.com</a>
-              <a href="https://orcid.org/0000-0002-1523-8025">ORCID</a>
-              <a href="https://inspirehep.net/authors/1945409?ui-citation-summary=true">INSPIRE-HEP</a>
+          <figure class="portrait-wrap">
+            <img src="assets/chia-kai-kuo-portrait.jpg?v=20260710" alt="Portrait of Chia-Kai Kuo" class="portrait" width="1200" height="1200" fetchpriority="high">
+            <figcaption>Theoretical physics</figcaption>
+          </figure>
+          <div class="profile-bio">
+            <p>I explore the geometric structures behind quantum field theory, with a focus on scattering amplitudes, ABJM theory, and correlation functions.</p>
+            <p>I received my Ph.D. from National Taiwan University, supervised by Song He and Yu-Tin Huang, studying loop amplitudes in ABJM theory and their positive geometries.</p>
+            <div class="profile-links" aria-label="Academic profiles">
+              <a class="button primary" href="assets/chia-kai-kuo-cv.pdf?v=20260710">Curriculum vitae <span class="icon icon-download" aria-hidden="true"></span></a>
+              <a class="text-link" href="https://inspirehep.net/authors/1945409?ui-citation-summary=true">INSPIRE-HEP <span class="icon icon-external" aria-hidden="true"></span></a>
+              <a class="text-link" href="https://orcid.org/0000-0002-1523-8025">ORCID <span class="icon icon-external" aria-hidden="true"></span></a>
             </div>
           </div>
         </div>
       </section>
 
       <section class="section news-band" aria-labelledby="news-title">
-        <div class="section-inner">
+        <div class="section-inner news-grid">
           <div class="section-heading">
-            <p class="section-kicker">Recent news</p>
-            <h2 id="news-title">Updates</h2>
+            <p class="section-kicker">What's new</p>
+            <h2 id="news-title">Recent updates</h2>
           </div>
           <div class="news-list">
             <article>
@@ -78,12 +65,12 @@
               <p><a href="https://arxiv.org/abs/2512.21947">Notes on off-shell conformal integrals and correlation functions at five points</a> appeared in Physical Review D.</p>
             </article>
             <article>
-              <time datetime="2026-03">March 2026</time>
-              <p><a href="https://arxiv.org/abs/2505.09808">Leading singularities and chambers of Correlahedron</a> appeared in JHEP.</p>
-            </article>
-            <article>
               <time datetime="2026-04">April 2026</time>
               <p><a href="https://arxiv.org/abs/2604.08512">Beyond Discontinuities: Cosmological WFCs from the Supersymmetric Orthogonal Grassmannian</a> was released as a preprint.</p>
+            </article>
+            <article>
+              <time datetime="2026-03">March 2026</time>
+              <p><a href="https://arxiv.org/abs/2505.09808">Leading singularities and chambers of Correlahedron</a> appeared in JHEP.</p>
             </article>
           </div>
         </div>
@@ -92,24 +79,29 @@
       <section class="section" id="research" aria-labelledby="research-title">
         <div class="section-inner two-column">
           <div class="section-heading sticky-heading">
-            <p class="section-kicker">Research</p>
-            <h2 id="research-title">Main directions</h2>
+            <p class="section-kicker"><span class="section-number">01</span> Research</p>
+            <h2 id="research-title">Physics through geometry.</h2>
+            <p class="section-note">Scattering amplitudes, correlation functions, and the structures that connect them.</p>
           </div>
           <div class="research-list">
             <article class="research-item">
               <h3>Positive geometry for scattering amplitudes</h3>
+              <span class="research-index" aria-hidden="true">01 /</span>
               <p>I study how amplitudes can be represented as canonical differential forms on positive geometries, with a particular focus on ABJM theory and its amplituhedron-like structures.</p>
             </article>
             <article class="research-item">
               <h3>Loop amplitudes and integrands</h3>
+              <span class="research-index" aria-hidden="true">02 /</span>
               <p>My work develops all-loop and finite-loop constructions for ABJM amplitudes, including unitarity cuts, dimensional reduction, and explicit two-loop integrands.</p>
             </article>
             <article class="research-item">
               <h3>Correlation functions and correlahedra</h3>
+              <span class="research-index" aria-hidden="true">03 /</span>
               <p>I am interested in the geometric organization of correlation-function integrands, chamber decompositions, leading singularities, and pure conformal integral bases.</p>
             </article>
             <article class="research-item">
               <h3>Cosmological wavefunction coefficients</h3>
+              <span class="research-index" aria-hidden="true">04 /</span>
               <p>Recent work extends orthogonal-Grassmannian ideas toward supersymmetric cosmological wavefunction coefficients and their analytic structure.</p>
             </article>
           </div>
@@ -118,13 +110,24 @@
 
       <section class="section publications-section" id="publications" aria-labelledby="publications-title">
         <div class="section-inner">
-          <div class="section-heading">
-            <p class="section-kicker">Publications</p>
-            <h2 id="publications-title">Selected and recent papers</h2>
-            <p class="section-note">For live citation data and the full record, see <a href="https://inspirehep.net/authors/1945409?ui-citation-summary=true">INSPIRE-HEP</a> and <a href="https://orcid.org/0000-0002-1523-8025">ORCID</a>.</p>
+          <div class="section-heading publication-heading">
+            <div>
+              <p class="section-kicker"><span class="section-number">02</span> Publications</p>
+              <h2 id="publications-title">Papers &amp; preprints</h2>
+            </div>
+            <a class="text-link" href="https://inspirehep.net/authors/1945409?ui-citation-summary=true">Full record on INSPIRE <span class="icon icon-external" aria-hidden="true"></span></a>
           </div>
-
-          <ol class="publication-list">
+          <form class="publication-tools" role="search" aria-label="Search publications" data-publication-tools hidden>
+            <div class="search-field">
+              <span class="icon icon-search" aria-hidden="true"></span>
+              <label class="sr-only" for="publication-search">Search papers, authors, or arXiv ID</label>
+              <input type="search" id="publication-search" placeholder="Search papers..." autocomplete="off" aria-controls="publication-list">
+            </div>
+            <label class="sr-only" for="publication-year">Publication year</label>
+            <select id="publication-year" aria-controls="publication-list"><option value="all">All years</option></select>
+            <output class="result-count" data-result-count aria-live="polite" aria-atomic="true"></output>
+          </form>
+          <ol class="publication-list" id="publication-list">
             <li>
               <span class="pub-year">2026</span>
               <div>
@@ -242,15 +245,19 @@
               </div>
             </li>
           </ol>
+          <div class="empty-results" data-empty-results hidden>
+            <p>No publications found.</p>
+            <button class="text-link" type="button" data-reset-search>Clear filters <span class="icon icon-x" aria-hidden="true"></span></button>
+          </div>
         </div>
       </section>
 
       <section class="section" id="talks" aria-labelledby="talks-title">
         <div class="section-inner two-column">
           <div class="section-heading sticky-heading">
-            <p class="section-kicker">Talks</p>
-            <h2 id="talks-title">Invited talks</h2>
-            <p class="section-note">A concise selection from the CV.</p>
+            <p class="section-kicker"><span class="section-number">03</span> Talks</p>
+            <h2 id="talks-title">Conversations in physics.</h2>
+            <p class="section-note">Selected invited talks and conference presentations.</p>
           </div>
           <div class="timeline">
             <article class="timeline-item">
@@ -286,7 +293,7 @@
         <div class="section-inner teaching-grid">
           <div>
             <p class="section-kicker">Teaching</p>
-            <h2 id="teaching-title">Teaching and supervision</h2>
+            <h2 id="teaching-title">In the classroom</h2>
           </div>
           <div class="teaching-copy">
             <p>I have served as a teaching assistant in the Department of Physics at National Taiwan University for Electricity and Magnetism, Quantum Mechanics, and Applied Mathematics I.</p>
@@ -298,10 +305,10 @@
       <section class="section cv-section" id="cv" aria-labelledby="cv-title">
         <div class="section-inner cv-grid">
           <div>
-            <p class="section-kicker">CV</p>
-            <h2 id="cv-title">Academic profile</h2>
-            <p>The downloadable CV includes positions, education, publications, awards, invited talks, teaching, and technical skills.</p>
-            <a class="button primary" href="assets/chia-kai-kuo-cv.pdf?v=20260710">Download CV</a>
+            <p class="section-kicker"><span class="section-number">04</span> Curriculum vitae</p>
+            <h2 id="cv-title">Academic path</h2>
+            <p>From National Taiwan University to the Max Planck Institute for Physics.</p>
+            <a class="button primary" href="assets/chia-kai-kuo-cv.pdf?v=20260710">Download CV <span class="icon icon-download" aria-hidden="true"></span></a>
           </div>
           <dl class="facts">
             <div>
@@ -327,15 +334,17 @@
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
         <div class="section-inner contact-grid">
           <div>
-            <p class="section-kicker">Contact</p>
-            <h2 id="contact-title">Get in touch</h2>
+            <p class="section-kicker"><span class="section-number">05</span> Contact</p>
+            <h2 id="contact-title">Let's connect.</h2>
             <p>I am happy to discuss amplitudes, positive geometry, correlation functions, and related questions in theoretical physics.</p>
           </div>
           <div class="contact-links">
-            <a href="mailto:ckkuai@mpp.mpg.de">ckkuai@mpp.mpg.de</a>
-            <a href="mailto:chiakaikuo@gmail.com">chiakaikuo@gmail.com</a>
-            <a href="https://orcid.org/0000-0002-1523-8025">ORCID: 0000-0002-1523-8025</a>
-            <a href="https://inspirehep.net/authors/1945409?ui-citation-summary=true">INSPIRE author profile</a>
+            <a href="mailto:ckkuai@mpp.mpg.de"><span><small>Institutional email</small>ckkuai@mpp.mpg.de</span><span class="icon icon-external" aria-hidden="true"></span></a>
+            <a href="mailto:chiakaikuo@gmail.com"><span><small>Personal email</small>chiakaikuo@gmail.com</span><span class="icon icon-external" aria-hidden="true"></span></a>
+            <div class="contact-profiles">
+              <a class="text-link" href="https://orcid.org/0000-0002-1523-8025">ORCID <span class="icon icon-external" aria-hidden="true"></span></a>
+              <a class="text-link" href="https://inspirehep.net/authors/1945409?ui-citation-summary=true">INSPIRE-HEP <span class="icon icon-external" aria-hidden="true"></span></a>
+            </div>
           </div>
         </div>
       </section>
@@ -343,9 +352,9 @@
 
     <footer class="site-footer">
       <p>© <span data-year></span> Chia-Kai Kuo</p>
-      <p>Built as a personal academic website.</p>
+      <a class="text-link" href="#home">Back to top <span class="icon icon-up" aria-hidden="true"></span></a>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20261023"></script>
   </body>
 </html>
