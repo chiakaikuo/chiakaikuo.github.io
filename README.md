@@ -10,7 +10,6 @@ Static academic website built from the supplied CV, INSPIRE profile, ORCID profi
 - `assets/chia-kai-kuo-cv.pdf`: downloadable CV
 - `assets/chia-kai-kuo-portrait.jpg`: portrait image
 - `assets/icons/`: locally hosted Lucide icons and their license
-- `assets/research/abjm-chambers.svg`: attributed research figure; provenance in `assets/research/README.md`
 
 ## Design and maintenance
 
