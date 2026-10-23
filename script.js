@@ -97,6 +97,25 @@ function filterPublications() {
   scheduleSectionUpdate();
 }
 
+function revealPublication(id) {
+  const publication = document.getElementById(id);
+  if (!publication?.matches(".publication-list > li") || !publication.hidden) return null;
+  search.value = "";
+  year.value = "all";
+  filterPublications();
+  return publication;
+}
+
+// Research links must still reach their paper after a publication filter hides it.
+document.querySelectorAll('.research-links a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", () => revealPublication(link.hash.slice(1)));
+});
+
+window.addEventListener("hashchange", () => {
+  const publication = revealPublication(window.location.hash.slice(1));
+  if (publication) publication.scrollIntoView({ block: "start" });
+});
+
 tools.addEventListener("submit", (event) => event.preventDefault());
 search.addEventListener("input", filterPublications);
 year.addEventListener("change", filterPublications);
